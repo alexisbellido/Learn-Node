@@ -1,0 +1,19 @@
+extends layout
+
+block content
+    div.wrapper
+        p.hello
+            | Hello! Sale ends #{h.moment().endOf('day').fromNow()}
+            |
+            b I am #{name} and my dog is #{dog}
+        - const upDog = dog.toUpperCase()
+        p upDog is #{upDog}
+        p dog.toUpperCase() is #{dog.toUpperCase()}
+        p Favorite color: #{h.favoriteColor}
+        span#yo I'm a second paragraph
+        figure
+            img(src="dog.jpg" alt=`Dog is ${dog}`)
+        h2
+            | Hello
+            |
+            em How are you?
